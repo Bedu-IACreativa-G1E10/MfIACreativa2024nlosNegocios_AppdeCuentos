@@ -1,0 +1,4 @@
+userId,username,mail,age,schoolGrade,achievements
+1,Lucy123,lucy@example.com,8,3,"{""completedStories"":10,""writingContestWinner"":true,""bookwormBadge"":true}"
+2,Tom456,tom@example.com,10,5,"{""completedStories"":15,""creativeWriterBadge"":true,""topReader"":true}"
+3,Emma789,emma@example.com,7,2,"{""completedStories"":5,""firstStoryBadge"":true}"

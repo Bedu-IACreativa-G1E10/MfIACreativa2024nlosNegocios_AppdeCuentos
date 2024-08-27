@@ -33,21 +33,13 @@
 
         <div id="userProfile" class="screen" style="display:none;">
             <h2>User Profile</h2>
-            <img src="/api/placeholder/100/100" alt="User Avatar" class="avatar">
-            <p>Username: Lucy123</p>
-            <p>Age: 8</p>
+            <img src="" alt="User Avatar" class="avatar">
+            <p></p>
+            <p></p>
             <h3>Favorite Stories:</h3>
-            <ul>
-                <li>The Adventures of Tom Sawyer</li>
-                <li>Harry Potter and the Sorcerer's Stone</li>
-                <li>Charlotte's Web</li>
-            </ul>
+            <ul id="favoriteStoriesList"></ul>
             <h3>Achievements:</h3>
-            <ul>
-                <li>Completed 10 stories</li>
-                <li>Won the Story Writing Contest</li>
-                <li>Bookworm Badge</li>
-            </ul>
+            <ul id="achievementsList"></ul>
             <button onclick="showScreen('dashboard')">Back to Dashboard</button>
         </div>
 
@@ -82,7 +74,7 @@
     </div>
 
     <div id="navigation">
-        <img src="/api/placeholder/50/50" alt="KidStoryTime Logo" class="logo" onclick="showScreen('dashboard')">
+        <img src="logo.png" alt="KidStoryTime Logo" class="logo" onclick="showScreen('dashboard')">
         <button onclick="showScreen('dashboard')">Dashboard</button>
         <button onclick="showScreen('storyList')">Stories</button>
         <button onclick="showScreen('userProfile')">Profile</button>
