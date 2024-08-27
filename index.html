@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidStoryTime</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="dashboard" class="screen">
+            <h1>KidStoryTime</h1>
+            <button onclick="showScreen('storyCreation')">Create New Story</button>
+            <button onclick="showScreen('storyList')">My Stories</button>
+            <button onclick="showScreen('userProfile')">User Profile</button>
+            <button onclick="showScreen('settings')">Settings</button>
+        </div>
+
+        <div id="storyCreation" class="screen" style="display:none;">
+            <h2>Create Your Story</h2>
+            <textarea id="storyText" rows="5" placeholder="Once upon a time..."></textarea>
+            <button onclick="generateStory()">Generate Story</button>
+            <div id="generatedStory"></div>
+            <button onclick="saveStory()">Save Story</button>
+            <button onclick="showScreen('dashboard')">Back to Dashboard</button>
+        </div>
+
+        <div id="storyList" class="screen" style="display:none;">
+            <h2>Story List</h2>
+            <div id="storyListContainer"></div>
+            <button onclick="showScreen('dashboard')">Back to Dashboard</button>
+        </div>
+
+        <div id="userProfile" class="screen" style="display:none;">
+            <h2>User Profile</h2>
+            <img src="/api/placeholder/100/100" alt="User Avatar" class="avatar">
+            <p>Username: Lucy123</p>
+            <p>Age: 8</p>
+            <h3>Favorite Stories:</h3>
+            <ul>
+                <li>The Adventures of Tom Sawyer</li>
+                <li>Harry Potter and the Sorcerer's Stone</li>
+                <li>Charlotte's Web</li>
+            </ul>
+            <h3>Achievements:</h3>
+            <ul>
+                <li>Completed 10 stories</li>
+                <li>Won the Story Writing Contest</li>
+                <li>Bookworm Badge</li>
+            </ul>
+            <button onclick="showScreen('dashboard')">Back to Dashboard</button>
+        </div>
+
+        <div id="settings" class="screen" style="display:none;">
+            <h2>Settings</h2>
+            <h3>Theme Colors</h3>
+            <div id="themeColors">
+                <button style="background-color: #ffa500;"></button>
+                <button style="background-color: #f0e68c;"></button>
+                <button style="background-color: #a9a9a9;"></button>
+            </div>
+            <h3>Font Size</h3>
+            <input type="range" min="12" max="24" value="16" id="fontSize">
+            <h3>Notification Settings</h3>
+            <label>
+                <input type="checkbox" id="enableNotifications"> Enable Notifications
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="soundAlerts"> Sound Alerts
+            </label>
+            <br>
+            <button onclick="showScreen('dashboard')">Back to Dashboard</button>
+        </div>
+
+        <div id="viewFullStory" class="screen" style="display:none;">
+            <h2 id="fullStoryTitle"></h2>
+            <img id="fullStoryImage" src="" alt="Story Illustration" class="story-image">
+            <p id="fullStoryContent"></p>
+            <button onclick="showScreen('storyList')">Back to Story List</button>
+        </div>
+    </div>
+
+    <div id="navigation">
+        <img src="/api/placeholder/50/50" alt="KidStoryTime Logo" class="logo" onclick="showScreen('dashboard')">
+        <button onclick="showScreen('dashboard')">Dashboard</button>
+        <button onclick="showScreen('storyList')">Stories</button>
+        <button onclick="showScreen('userProfile')">Profile</button>
+        <button id="continueReading" style="display:none;">Continue Reading</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
